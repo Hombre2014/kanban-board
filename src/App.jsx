@@ -1,5 +1,13 @@
+import Center from './components/Center';
+import Header from './components/Header';
+
 const App = () => {
-  return <div className="text-3xl font-bold mt-2 ml-2">App</div>;
+  return (
+    <div className="">
+      <Header />
+      <Center />
+    </div>
+  );
 };
 
 export default App;
