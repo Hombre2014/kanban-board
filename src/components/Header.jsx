@@ -4,9 +4,11 @@ import logo from '../assets/logo-mobile.svg';
 import iconDown from '../assets/icon-chevron-down.svg';
 import iconUp from '../assets/icon-chevron-up.svg';
 import circle from '../assets/icon-vertical-ellipsis.svg';
+import HeaderDropDown from './HeaderDropDown';
 
 const Header = () => {
   const [openDropDown, setOpenDropDown] = useState(false);
+
   return (
     <div className="p-4 fixed left-0 bg-white dark:bg-[#2b2c37] z-50 right-0">
       <header className="flex items-center justify-between">
@@ -38,6 +40,8 @@ const Header = () => {
           <img src={circle} alt="circle icon" className="cursor-pointer h-6" />
         </div>
       </header>
+
+      {openDropDown && <HeaderDropDown setOpenDropDown={setOpenDropDown} />}
     </div>
   );
 };
